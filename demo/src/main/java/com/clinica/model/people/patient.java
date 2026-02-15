@@ -2,7 +2,6 @@ package com.clinica.model.people;
 
 import com.clinica.model.enums.gender;
 import com.clinica.model.billing.Policy;
-// import com.clinica.model.seguridad.Credenciales;
 
 import java.time.LocalDate;
 import java.util.HashMap;
@@ -11,13 +10,11 @@ import java.util.regex.Pattern;
 
 public class patient extends people {
 
-    // private final Credenciales credenciales;
     private final gender genero;
 
-    private emergencycontact contactoEmergencia; // 0..1
-    private Policy poliza;                   // 0..1
+    private emergencycontact contactoEmergencia;
+    private Policy poliza;                   
 
-    // Para regla de copago anual (año -> total copagos)
     private final Map<Integer, Long> copagoAnual = new HashMap<>();
 
     private static final Pattern DIEZ = Pattern.compile("^\\d{10}$");
@@ -29,12 +26,8 @@ public class patient extends people {
         if (telefono10 == null || !DIEZ.matcher(telefono10).matches()) {
             throw new IllegalArgumentException("Teléfono paciente debe tener 10 dígitos.");
         }
-        // if (credenciales == null) throw new IllegalArgumentException("Credenciales requeridas.");
         this.genero = genero;
-        // this.credenciales = credenciales;
     }
-
-    // public Credenciales getCredenciales() { return credenciales; }
     public gender getGenero() { return genero; }
 
     public emergencycontact getContactoEmergencia() { return contactoEmergencia; }

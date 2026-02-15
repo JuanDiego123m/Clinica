@@ -3,7 +3,7 @@ package com.clinica.model.nursing;
 public class ReferenceOrderItem {
     private final String numeroOrden;
     private final int numeroItem;
-    private final String nota; // qué se administró / observación
+    private final String nota; 
 
     public ReferenceOrderItem(String numeroOrden, int numeroItem, String nota) {
         if (numeroOrden == null || !numeroOrden.matches("^\\d{1,6}$"))

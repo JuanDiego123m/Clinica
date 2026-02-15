@@ -11,7 +11,7 @@ public class ItemProcedure extends ItemOrder {
         private final int cantidad;
         private final String frecuencia;
         private final boolean requiereEspecialista;
-        private final specialty especialidad; // null si no requiere
+        private final specialty especialidad;
     
         public ItemProcedure(String numeroOrden, int numeroItem, Procedure procedimiento,
                                  int cantidad, String frecuencia,

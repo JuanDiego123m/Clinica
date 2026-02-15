@@ -6,11 +6,11 @@ import java.util.regex.Pattern;
 
 public abstract class people {
 
-    private final String cedula; // única
+    private final String cedula;
     private String nombreCompleto;
     private LocalDate fechaNacimiento;
-    private String direccion; // máx 30
-    private String telefono;  // 1..10 dígitos (paciente exige 10)
+    private String direccion; 
+    private String telefono;  
     private String email;
 
     private static final Pattern SOLO_DIGITOS = Pattern.compile("^\\d+$");

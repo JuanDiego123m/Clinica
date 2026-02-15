@@ -6,7 +6,7 @@ import java.util.EnumSet;
 public class Procedure extends InventoryItem {
     
         private final boolean requiereEspecialista;
-        private final EnumSet<specialty> especialidades; // si requiere
+        private final EnumSet<specialty> especialidades;
     
         public Procedure(String id, String nombre, long costo,
                              boolean requiereEspecialista, EnumSet<specialty> especialidades) {

@@ -5,12 +5,12 @@ import java.time.LocalDateTime;
 import java.util.*;
 public class Order {
 
-    private final String numeroOrden;    // único global (control externo), máx 6 dígitos
+    private final String numeroOrden;
     private final String cedulaPaciente;
     private final String cedulaMedico;
     private final LocalDateTime fechaCreacion;
 
-    private final Map<Integer, ItemOrder> items = new HashMap<>(); // item único por número
+    private final Map<Integer, ItemOrder> items = new HashMap<>();
 
     public Order(String numeroOrden, String cedulaPaciente, String cedulaMedico, LocalDateTime fechaCreacion) {
         if (numeroOrden == null || !numeroOrden.matches("^\\d{1,6}$"))

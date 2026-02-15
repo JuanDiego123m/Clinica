@@ -9,12 +9,12 @@ import java.util.List;
 import java.util.Objects;
 
 public class CareRecord {
-        private final LocalDate fecha;     // subclave
-        private final String cedulaMedico; // máx 10 dígitos (se valida por Persona si usas Medico)
+        private final LocalDate fecha;     
+        private final String cedulaMedico; 
     
         private final String motivoConsulta;
         private final String sintomatologia;
-        private String diagnostico; // puede iniciar vacío si está en etapa de ayuda diagnóstica
+        private String diagnostico;
     
         private final List<Order> ordenes = new ArrayList<>();
     

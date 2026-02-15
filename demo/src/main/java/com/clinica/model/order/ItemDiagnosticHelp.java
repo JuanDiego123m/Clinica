@@ -9,7 +9,7 @@ public class ItemDiagnosticHelp extends ItemOrder {
     private final DiagnosticHelp examen;
     private final int cantidad;
     private final boolean requiereEspecialista;
-    private final specialty especialidad; // null si no requiere
+    private final specialty especialidad;
 
     public ItemDiagnosticHelp(String numeroOrden, int numeroItem, DiagnosticHelp examen,
                                 int cantidad, boolean requiereEspecialista, specialty especialidad) {

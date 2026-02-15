@@ -65,7 +65,6 @@ public class Invoice {
         return polizaActiva() ? Math.max(0, total - valorPaciente()) : 0;
     }
 
-    // Llamar cuando se “cierra” la factura para afectar el acumulado anual
     public void registrarPagoPaciente() {
         if (polizaActiva()) {
             paciente.acumularCopago(fecha.getYear(), valorPaciente());
